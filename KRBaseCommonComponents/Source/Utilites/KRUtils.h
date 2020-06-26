@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -91,9 +92,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return 富文本
  */
 + (NSAttributedString *)getAttributedFromHtmlString:(NSString *)string font:(UIFont *)font;
-
-+ (UIViewController*)currentViewController;
-
 
 /**
  校验字符串是否全是数字

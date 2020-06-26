@@ -283,7 +283,6 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *results = [defaults objectForKey:KEY_GESTURES_PASSWORD];
-    DLOG(@"手势密码存储的信息:%@",results);
     //    if (results == nil) {
     //        results = [[NSMutableDictionary alloc] init];
     //    }

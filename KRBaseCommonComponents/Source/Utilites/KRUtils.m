@@ -7,7 +7,6 @@
 //
 
 #import "KRUtils.h"
-#import "TabViewController.h"
 
 @implementation KRUtils
 //金钱每三位加一个逗号
@@ -203,7 +202,7 @@
                 if (src.length > 0) {
                     
                     // 先将链接取个本地名字，且获取完整路径
-                    [urlDicts setObject:[NSString stringWithFormat:@"%@%@",Baseurl,src] forKey:src];
+//                    [urlDicts setObject:[NSString stringWithFormat:@"%@%@",Baseurl,src] forKey:src];
                 }
             }
         }
@@ -354,34 +353,34 @@
 }
 
 
-+ (UIViewController*)currentViewController {
-    
-    UIViewController* vc = [UIApplication sharedApplication].keyWindow.rootViewController;
-    while (1) {
-        if ([vc isKindOfClass:[UINavigationController class]]) {
-            vc = ((UINavigationController*)vc).visibleViewController;
-        }
-        if ([vc isKindOfClass:[UITabBarController class]]) {
-            vc = ((UITabBarController*)vc).selectedViewController;
-        }
-        if ([vc isKindOfClass:[TabViewController class]]) {
-            vc = ((TabViewController*)vc).selectedViewController;
-        }
-        
-        if ([vc isKindOfClass:[UINavigationController class]]) {
-            vc = ((UINavigationController*)vc).visibleViewController;
-        }
-        
-        if (vc.presentedViewController) {
-            vc = vc.presentedViewController;
-        }else{
-            break;
-        }
-        
-    }
-    return vc;
-    
-}
+//+ (UIViewController*)currentViewController {
+//
+//    UIViewController* vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+//    while (1) {
+//        if ([vc isKindOfClass:[UINavigationController class]]) {
+//            vc = ((UINavigationController*)vc).visibleViewController;
+//        }
+//        if ([vc isKindOfClass:[UITabBarController class]]) {
+//            vc = ((UITabBarController*)vc).selectedViewController;
+//        }
+//        if ([vc isKindOfClass:[TabViewController class]]) {
+//            vc = ((TabViewController*)vc).selectedViewController;
+//        }
+//
+//        if ([vc isKindOfClass:[UINavigationController class]]) {
+//            vc = ((UINavigationController*)vc).visibleViewController;
+//        }
+//
+//        if (vc.presentedViewController) {
+//            vc = vc.presentedViewController;
+//        }else{
+//            break;
+//        }
+//
+//    }
+//    return vc;
+//
+//}
 
 
 + (BOOL)validateNumber:(NSString*)number {
