@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "KRBaseCommonComponents"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "基础通用组件"
 
   # This description is used to generate tags and improve search results.
@@ -94,13 +94,13 @@ Pod::Spec.new do |spec|
  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
  # spec.exclude_files = "Classes/Exclude"
    spec.subspec 'Categories' do |sub1|
-   sub1.source_files = "KRBaseCommonComponents/Categories/**/*"
+   sub1.source_files = "KRBaseCommonComponents/Source/Categories/**/*"
    sub1.dependency 'KRBaseCommonComponents/Utilites'
    sub1.dependency 'AFNetworking', '~> 3.2.1'
    end
    
    spec.subspec 'Utilites' do |sub2|
-   sub2.source_files = "KRBaseCommonComponents/Utilites/**/*"
+   sub2.source_files = "KRBaseCommonComponents/Source/Utilites/**/*"
    end
 
   # spec.public_header_files = "Classes/**/*.h"
